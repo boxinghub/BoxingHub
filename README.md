@@ -8,7 +8,7 @@
 
 #### Author: Hongbo Wei from Guiyang, China. A software engineer who loves boxing 🥊!
 
-![BoxingHub](static/images/boxinghub.png "BoxingHub")
+![BoxingHub](static/images/preview.png "BoxingHub")
 
 - It is a web application based on the Flask framework of Python, HTML, CSS, JavaScript and SQLite.
 - The design is responsive, and it adapts to all kinds of devices, you can view it on a laptop or a phone.
