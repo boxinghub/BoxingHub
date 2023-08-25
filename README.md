@@ -7,6 +7,7 @@
 #### Author: Hongbo Wei from Guiyang, China. A software engineer who loves boxing 🥊!
 
 - It is a web application based on the Flask framework of Python, HTML, CSS, JavaScript and SQLite.
+- The design is responsive, and it adapts to all kinds of devices, you can view it on a laptop or a phone.
 - This project is an educational website that helps users to lear how to box.
 - Users can learn boxing knowledge here, including techniques, theories, rules, and gears.
 - It also provides information on top boxing clubs, such as address and contact.
@@ -21,7 +22,7 @@
 ##### 2. Folder "static":
 
 - bootstrap: control the aesthetics of the web application.
-- css: control the aesthetics of the web application, for example: color, size, and position.
+- css: control the aesthetics of the web application, for example: color, size, and position. It also makes certain elements more responsive.
 - fonts: control the fonts of the web application.
 - images: images resources used by this application. Such as logos, background, images for the content of different pages.
 - js: control how the view effects of how a page is loaded, for example, when a user scrolls down, the navigation bar shrinks to provide a better view and convenientce to navigate to other pages; when a user is scroll a page, and when "likes" or "loves" button is clicked.
