@@ -116,5 +116,23 @@
         }
 		// Like and love buttons - end
 
+        // Daytime and nighttime favicon switch
+		function setFavicon() {
+			console.log("Method called.")
+			const now = new Date();
+			const hours = now.getHours();
+			const favicon = document.getElementById("favicon");
+		
+			if (hours >= 6 && hours < 18) { // Daytime (6 AM to 6 PM)
+				favicon.href = "/static/images/logo-white-circle.png";
+			} else { // Nighttime (6 PM to 6 AM)
+				favicon.href = "/static/images/logo-black-circle.png";
+			}
+		}
+	
+		// Call the function initially and set a timer to update every minute
+		setFavicon();
+		setInterval(setFavicon, 60000); // Update every minute
+
 	}); // End document ready
 })(this.jQuery);

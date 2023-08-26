@@ -87,15 +87,6 @@ img {
 	display: block;
 	margin: 0 auto;
 }
-.list-icons {
-	padding: 0;
-	margin: 20px 0;
-	list-style: none;
-	font-size: 18px;
-}
-.list-icons li {
-	padding: 0 0 15px 0;
-}
 blockquote {
 	border-left: none;
 	padding-left: 0;
