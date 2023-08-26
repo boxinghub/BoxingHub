@@ -1,6 +1,6 @@
 Copyright (c) [2023-2049] [Hongbo Wei](https://github.com/hongbo-weia)
 
-License:cc-by-4.0
+license:cc-by-4.0
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
