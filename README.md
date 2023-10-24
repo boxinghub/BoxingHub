@@ -1,6 +1,6 @@
 # BoxingHub
 
-## Website Address: http://hongbowei.pythonanywhere.com/
+## Website Address: https://www.boxinghub.org | https://hongbowei.pythonanywhere.com/
 
 #### Video Demo: https://youtu.be/9yuzUpK1MCM
 
