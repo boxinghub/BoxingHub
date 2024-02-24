@@ -36,6 +36,12 @@ def gears():
     likes, loves = get_likes_and_loves()
     return render_template("gears.html", likes=likes, loves=loves)
 
+# Gears page
+@app.route("/moments")
+def moments():
+    likes, loves = get_likes_and_loves()
+    return render_template("moments.html", likes=likes, loves=loves)
+
 
 # Recovery page
 @app.route("/recovery")
