@@ -733,3 +733,8 @@ border-radius: 50%;
 	justify-content: center;
 	height: 300px; /* Adjust the height as needed */
 }
+
+/* Clubs */
+iframe {
+	width: 100%;
+}
