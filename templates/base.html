@@ -1,39 +1,25 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
+	<head>
     <!-- Responsive design -->
-    <meta charset="utf-8" />
-    <meta name="description" content="Everything about boxing" />
-    <meta name="author" content="hongbo-wei" />
+    <meta charset="utf-8">
+    <meta name="description" content="Everything about boxing">
+    <meta name="author" content="hongbo-wei">
 
     <!-- Mobile Meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link
-      rel="icon"
-      href="/static/images/logo-white-circle.png"
-      type="image/png"
-      id="favicon"
-    />
+    <link rel="icon" href="/static/images/logo-white-circle.png" type="image/png" id="favicon" />
 
-    <!-- Load css -->
-    <link
-      href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}"
-      rel="stylesheet"
-    />
-    <link
-      href="{{ url_for('static', filename='fonts/font-awesome/css/font-awesome.css') }}"
-      rel="stylesheet"
-    />
-    <link
-      href="{{ url_for('static', filename='css/style.css') }}"
-      rel="stylesheet"
-    />
+        <!-- Load css -->
+    <link href="./static/bootstrap/css/bootstrap.css" rel="stylesheet"> 
+    <link href="./static/fonts/font-awesome/css/font-awesome.css" rel="stylesheet"> 
+    <link href="./static/css/style.css" rel="stylesheet"> 
 
-    <!-- Flask inheritance  -->
-    <title>{% block title %}{% endblock %}</title>
+        <!-- Flask inheritance  -->
+        <title>{% block title %}{% endblock %}</title>
   </head>
 
   <body class="no-trans">
