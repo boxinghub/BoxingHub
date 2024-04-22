@@ -49,6 +49,12 @@
 
 #### Follow below two steps below to run the web app:
 
+1. install dependencies
+
+    pip install -r requirements.txt
+
+2. Run server
+
     flask run
 
 ---
