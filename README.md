@@ -56,7 +56,7 @@
 
 2. Run server
 
-    flask run
+    python manage.py runserver
 
 ---
 

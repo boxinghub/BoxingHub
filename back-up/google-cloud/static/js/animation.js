@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const movingImage = document.getElementById('movingImage');
     const punchingBag = document.getElementById('punchingBag');
     let direction = 1;
-    const speed = 2; // Adjust the speed by changing this value
-    const maxX = window.innerWidth * 6 / 7; // Adjust for the image width
-    const minX = window.innerWidth * 5 / 7;
-    let x = window.innerWidth * 5 / 7;
+    const speed = 1.5; // Adjust the speed by changing this value
+    const maxX = window.innerWidth * 4 / 7; // Adjust for the image width
+    const minX = window.innerWidth * 3 / 7;
+    let x = window.innerWidth * 3 / 7;
 
     // Position the punching bag at maxX
     punchingBag.style.left = `${maxX}px`;
