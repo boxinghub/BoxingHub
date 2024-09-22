@@ -1,0 +1,6 @@
+{
+    "recommendations": [
+        "amazonwebservices.aws-toolkit-vscode",
+        "mark-tucker.aws-cli-configure"
+    ]
+}
