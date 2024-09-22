@@ -5,8 +5,9 @@
 {% endblock %}
 
 {% block body %}
-	<section id="gears" class="section clearfix no-view secPadding text-center" data-animation-effect="fadeIn"> 
-		<div class="space"></div> 
+{% load static %}
+	<section id="gears" class="section clearfix no-view secPadding text-center" data-animation-effect="fadeIn">
+		<div class="space"></div>
 
 		<div class="container">
 			<div class="col-md-12">
@@ -18,7 +19,7 @@
 					<div class="row">
 						<h4>Fight Gloves</h4>
 						<div class="col-sm-4">
-							<img src="{{ url_for('static', filename='images/gloves/fight-gloves.jpg') }}">
+							<img src="{% static 'images/gloves/fight-gloves.jpg' %}">
 						</div>
 						<div class="col-sm-4">
 							<div class="vertical-center">
@@ -29,15 +30,15 @@
 							</div>
 						</div>
 						<div class="col-sm-4">
-							<img src="{{ url_for('static', filename='images/gloves/pacquiao-punching.jpg') }}">
+							<img src="{% static 'images/gloves/pacquiao-punching.jpg' %}">
 						</div>
 					</div>
-					<div class="space"></div> 
+					<div class="space"></div>
 					
 					<div class="row">
 						<h4>Sparring Gloves</h4>
 						<div class="col-sm-4">
-							<img src="{{ url_for('static', filename='images/gloves/sparring-gloves.jpg') }}">
+							<img src="{% static 'images/gloves/sparring-gloves.jpg' %}">
 						</div>
 						<div class="col-sm-4">
 							<div class="vertical-center">
@@ -47,15 +48,15 @@
 							</div>
 						</div>
 						<div class="col-sm-4">
-							<img src="{{ url_for('static', filename='images/gloves/winning-white.jpg') }}">
+							<img src="{% static 'images/gloves/winning-white.jpg' %}">
 						</div>
 					</div>
-					<div class="space"></div> 
+					<div class="space"></div>
 
 					<div class="row">
 						<h4>Bag Gloves</h4>
 						<div class="col-sm-4">
-							<img src="{{ url_for('static', filename='images/gloves/power-punch-gloves.jpg') }}">
+							<img src="{% static 'images/gloves/power-punch-gloves.jpg' %}">
 						</div>
 						<div class="col-sm-4">
 							<p>
@@ -74,7 +75,7 @@
 							</p>
 						</div>
 						<div class="col-sm-4">
-							<img src="{{ url_for('static', filename='images/gloves/old-school-gloves.jpg') }}">
+							<img src="{% static 'images/gloves/old-school-gloves.jpg' %}">
 						</div>
 					</div>
 					<div class="space"></div>
@@ -92,7 +93,7 @@
 							<p>
 								Handwraps are used to make fists solid, support wraist, and make fists to fit in gloves better.
 							</p>
-							<img src="{{ url_for('static', filename='images/protection/handwraps.jpg') }}">
+							<img src="{% static 'images/protection/handwraps.jpg' %}">
 						</div>
 
 						<div class="col-md-6">
@@ -100,7 +101,7 @@
 							<p>
 								The best customized	 mouthguard can be made using one's tooth model. A boxer should go to a dentist to get that first.
 							</p>
-							<img src="{{ url_for('static', filename='images/protection/mouthguard.jpg') }}">
+							<img src="{% static 'images/protection/mouthguard.jpg' %}">
 						</div>
 					</div>
 					<div class="space"></div>
@@ -111,14 +112,14 @@
 							<p>
 								A headgear is mostly used in sparring to prevent a boxer from getting a facial cut, and maybe getting knocked down.
 							</p>
-							<img src="{{ url_for('static', filename='images/protection/headgear.jpg') }}">
+							<img src="{% static 'images/protection/headgear.jpg' %}">
 						</div>
 						<div class="col-md-6">
 							<h4>No-foul Protector</h4>
 							<p>
 								To protect the weakest part of a man, should be worn for sparring and formal boxing matches.
 							</p>
-							<img src="{{ url_for('static', filename='images/protection/no-foul-protector.jpg') }}">
+							<img src="{% static 'images/protection/no-foul-protector.jpg' %}">
 						</div>
 					</div>
 					<div class="space"></div>
@@ -130,7 +131,7 @@
 					<hr>
 
 					<div class="col-md-6">
-						<img src="{{ url_for('static', filename='images/protection/footwear.jpeg') }}">
+						<img src="{% static 'images/protection/footwear.jpeg' %}">
 					</div>
 
 					<div class="col-md-6">

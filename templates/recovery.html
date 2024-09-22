@@ -5,8 +5,9 @@
 {% endblock %}
 
 {% block body %}
-	<section id="recovery" class="section clearfix no-view secPadding text-center" data-animation-effect="fadeIn"> 
-		<div class="space"></div> 
+{% load static %}
+	<section id="recovery" class="section clearfix no-view secPadding text-center" data-animation-effect="fadeIn">
+		<div class="space"></div>
 
 		<div class="container">
 			<div class="col-md-12">
@@ -43,7 +44,7 @@
 					<hr>
 
 					<p><a href="https://boxingscience.co.uk/sleep-tips-for-boxing-champions/">“LEFT, RIGHT, GOODNIGHT” – SLEEP TIPS FOR BOXERS - BoxingScience</a></p>
-					<img src="{{ url_for('static', filename='images/recovery/sleep.png') }}" alt="sleep well">
+					<img src="{% static 'images/recovery/sleep.png' %}" alt="sleep well">
 				</div>
 
 			</div>

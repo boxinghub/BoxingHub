@@ -1,0 +1,16 @@
+{% load static %}
+<meta name="csrf-token" content="{{ csrf_token }}">
+<link href="{% static 'css/chatbot.css' %}" rel="stylesheet"> 
+
+<button id="open-chatbot">💬</button>
+<div class="chat-container" id="chat-container">
+    <div class="chat-header">
+        Boxing Chatbot
+        <button class="minimize-button">-</button>
+    </div>
+    <div class="chat-content" id="chat-content">
+        <!-- Chat content will be dynamically inserted here -->
+    </div>
+</div>
+
+<script type="text/javascript" src="{% static 'js/chatbot.js' %}"></script>

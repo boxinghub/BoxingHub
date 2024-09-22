@@ -1,3 +1,4 @@
+
 # BoxingHub
 
 ## Website Address: https://www.boxinghub.org | https://hongbowei.pythonanywhere.com/
@@ -55,7 +56,7 @@
 
 2. Run server
 
-    flask run
+    python manage.py runserver
 
 ---
 

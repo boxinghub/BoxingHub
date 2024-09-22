@@ -5,8 +5,9 @@
 {% endblock %}
 
 {% block body %}
-	<section id="moments" class="section clearfix no-view secPadding" data-animation-effect="fadeIn"> 
-		<div class="space"></div> 
+{% load static %}
+	<section id="moments" class="section clearfix no-view secPadding" data-animation-effect="fadeIn">
+		<div class="space"></div>
 
 		<div class="container">
 			<div class="col-md-12">
@@ -16,7 +17,7 @@
 					<hr>
 
 					<div class="col-md-12">
-						<img src="{{ url_for('static', filename='images/champions/Mike-Tyson.jpeg') }}">
+						<img src="{% static 'images/champions/Mike-Tyson.jpeg' %}">
 					</div>
 
 				</div>
@@ -28,7 +29,7 @@
 					<hr>
 
 					<div class="col-md-12">
-						<img src="{{ url_for('static', filename='images/champions/Roberto-Durán-0.jpeg') }}">
+						<img src="{% static 'images/champions/Roberto-Durán-0.jpeg' %}">
 					</div>
 
 				</div>
@@ -40,7 +41,7 @@
 					<hr>
 
 					<div class="col-md-12">
-						<img src="{{ url_for('static', filename='images/champions/Mauricio-Sulaimán.jpeg') }}">
+						<img src="{% static 'images/champions/Mauricio-Sulaimán.jpeg' %}">
 					</div>
 
 				</div>
@@ -52,19 +53,19 @@
 					<hr>
 
 					<div class="col-md-12">
-						<img src="{{ url_for('static', filename='images/champions/Bridger-Walker.jpeg') }}">
+						<img src="{% static 'images/champions/Bridger-Walker.jpeg' %}">
 					</div>
 
 				</div>
 				
-				<div class="space"></div> 
+				<div class="space"></div>
 
 				<div class="row">
 					<h1 class="title text-center"><a href="#">More to come</a></h1>
 					<hr>
 
 					<div class="col-md-12">
-						<img src="{{ url_for('static', filename='images/goat.jpeg') }}">
+						<img src="{% static 'images/goat.jpeg' %}">
 					</div>
 				</div>
 

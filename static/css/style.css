@@ -117,8 +117,12 @@ blockquote {
 }
 .banner-image {
 	vertical-align: middle;
-	min-height: 100%;
+	min-height: 100vh;
 	width: 100%;
+	background-image: url("../images/brain-boxing.jpg");
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 .banner:after {
 	position: absolute;
@@ -686,8 +690,22 @@ border-radius: 50%;
 	color: #318CE7;
 }
 
-/* Techniques */
-#techniques img {
+/* Fundamentals */
+#fundamentals img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Defense */
+#defence img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Offense */
+#offence img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -737,4 +755,14 @@ border-radius: 50%;
 /* Clubs */
 iframe {
 	width: 100%;
+}
+
+/* Computer Vision */
+#imageUpload,
+#runInference {
+  height: 30px;
+}
+
+#messageAfterInference {
+	text-align: center;
 }

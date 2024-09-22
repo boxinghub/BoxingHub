@@ -1,9 +1,9 @@
 (function($){
 	$(document).ready(function(){
 	
-		// var imagePath = "static/images/brain-boxing.jpg";
-		// $(".banner-image").backstretch(imagePath);
-
+        // var imagePath = "static/images/brain-boxing.jpg";
+        // $(".banner-image").backstretch(imagePath);
+		
 		// Fixed header
 		//-----------------------------------------------
 		$(window).scroll(function() {
@@ -91,29 +91,72 @@
 			updateLoveInDatabase(love);
 		}
 
+		// Function to get CSRF token from cookies
+		function getCookie(name) {
+			let cookieValue = null;
+			if (document.cookie && document.cookie !== '') {
+				const cookies = document.cookie.split(';');
+				for (let i = 0; i < cookies.length; i++) {
+					const cookie = cookies[i].trim();
+					// Does this cookie string begin with the name we want?
+					if (cookie.substring(0, name.length + 1) === (name + '=')) {
+						cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+						break;
+					}
+				}
+			}
+			return cookieValue;
+		}
+
+		const csrftoken = getCookie('csrftoken');
+
+		// Setting up AJAX to include CSRF token
+		$.ajaxSetup({
+			beforeSend: function(xhr, settings) {
+				if (!/^(GET|HEAD|OPTIONS|TRACE)$/.test(settings.type) && !this.crossDomain) {
+					xhr.setRequestHeader("X-CSRFToken", csrftoken);
+				}
+			}
+		});
+
 		function updateLikeInDatabase(newLike) {
 			$.ajax({
 				type: 'POST',
-				url: '/update_like',
-				data: JSON.stringify({ like: newLike }),
-				contentType: 'application/json',
+				url: '/update_like/',
+				data: {
+					like: newLike,  // Sending 'like' as data field
+					csrfmiddlewaretoken: csrftoken
+				},
 				success: function(response) {
-					console.log('Like updated in the database');
+					// Handle success
+					console.log('Like updated successfully');
+				},
+				error: function(xhr, status, error) {
+					// Handle error
+					console.error('Error updating like:', error);
 				}
 			});
 		}
-
+		
 		function updateLoveInDatabase(newLove) {
-            $.ajax({
-                type: 'POST',
-                url: '/update_love',
-                data: JSON.stringify({ love: newLove }),
-                contentType: 'application/json',
-                success: function(response) {
-                    console.log('Love updated in the database');
-                }
-            });
-        }
+			$.ajax({
+				type: 'POST',
+				url: '/update_love/',
+				data: {
+					love: newLove,  // Sending 'love' as data field
+					csrfmiddlewaretoken: csrftoken
+				},
+				success: function(response) {
+					// Handle success
+					console.log('Love updated successfully');
+				},
+				error: function(xhr, status, error) {
+					// Handle error
+					console.error('Error updating love:', error);
+				}
+		
+			});
+		}		
 		// Like and love buttons - end
 
         // Daytime and nighttime favicon switch

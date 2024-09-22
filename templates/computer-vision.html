@@ -1,0 +1,44 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+AI Inference on Boxing
+{% endblock %}
+
+{% block body %}
+{% load static %}
+<section id="computer-vision" class="section clearfix no-view secPadding" data-animation-effect="fadeIn">
+    <div class="space"></div>
+	<div class="container">
+		<div class="col-md-12">
+			<div class="row">
+                <div class="col-md-6">
+                    <h2>Upload Image</h2>
+                    <input type="file" id="imageUpload" accept="image/*">
+                    <div class="space"></div>
+                    <img id="uploadedImage" src="#" alt="Uploaded Image" style="max-width: 100%; display: none;">
+                </div>
+                <div class="col-md-6">
+                    <h2>Classified Image</h2>
+                    <button id="runInference">Run Inference</button>
+                    <div class="space"></div>
+                    <img id="classifiedImage" src="#" alt="Classified Image" style="max-width: 100%; display: none;">
+                </div>
+            </div>
+            <div class="space"></div>
+            <div class="row">
+                <!-- Message to be displayed after inference -->
+                <p id="messageAfterInference" style="text-align: center;"></p>
+            </div>
+        </div>
+    </div>
+</section>
+{% block chatbot %}
+	{% include 'chatbot.html'%}
+{% endblock %}
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'js/computer-vision.js' %}"></script>
+{% endblock %}

@@ -5,9 +5,12 @@
 {% endblock %}
 
 {% block body %}
+{% load static %}
 	<!-- banner start --> 
 	<div id="banner" class="banner">
-		<div class="banner-image"></div>
+		<div class="banner-image">
+			{% comment %} <img src="{% static '/images/brain-boxing.jpg' %}" alt="Banner Image" class="stretched-image"> {% endcomment %}
+		</div>
 		<div class="banner-caption">
 			<div class="container">
 				<div class="row">					 
@@ -154,7 +157,7 @@
 					<div class="row">
 						
 						<div class="col-md-6">
-							<img src="{{ url_for('static', filename='images/boxing-greats.jpg') }}" alt="boxing-greats">
+							<img src="{% static 'images/boxing-greats.jpg' %}" alt="Boxing Greats">
 							<div class="space"></div>
 						</div>
 
@@ -238,7 +241,7 @@
 						</div>
 
 						<div class="col-md-6">
-							<p><img src="{{ url_for('static', filename='images/boxing-pyramid.png') }}"></p>
+							<p><img src="{% static 'images/boxing-pyramid.png' %}"></p>
 						</div>
 
 					</div>
