@@ -11,7 +11,7 @@
 
 ![BoxingHub](static/images/preview.png "BoxingHub")
 
-- It is a web application based on the Flask framework of Python, HTML, CSS, JavaScript and SQLite.
+- It is a web application based on the Django framework of Python, HTML, CSS, JavaScript and SQLite.
 - The design is responsive, and it adapts to all kinds of devices, you can view it on a laptop or a phone.
 - This project is an educational website that helps users to learn how to box.
 - Users can learn boxing knowledge here, including techniques, theories, rules, and gears.
@@ -42,7 +42,7 @@
 - rules.html: the Rules page talks about the basic rules of professional boxing, such as weight class, size of gloves, rounds, and titles.
 - techniques.html: the Techniques page talks about the fundamental techniques of boxing.
 
-##### 4. File "app.py": the flask configuration file. It connects to the database boxinghub.db, auto-reloads the content of the page if anything changes, provides a different route for users to browse, and updates the database according to the interaction between users and the web app.
+##### 4. File "manage.py": the Django configuration file. It connects to the database boxinghub.db, auto-reloads the content of the page if anything changes, provides a different route for users to browse, and updates the database according to the interaction between users and the web app.
 
 ##### 5. File "boxinghub.db: an SQLite3 database that records every "likes" and "loves" given by users.
 
