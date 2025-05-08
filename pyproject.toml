@@ -1,0 +1,20 @@
+[project]
+name = "boxinghub"
+version = "1.0.0"
+description = "BoxingHub is dedicated to spreading boxing knowledge and developing boxing culture"
+authors = [
+    {name = "Hongbo Wei",email = "hongbo_wei@outlook.com"}
+]
+license = {text = "Creative Commons Attribution 4.0 International License"}
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "django (>=5.2,<6.0)",
+    "djangorestframework (>=3.16.0,<4.0.0)",
+    "django-cors-headers (>=4.7.0,<5.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

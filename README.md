@@ -51,13 +51,21 @@
 #### Follow below two steps below to run the web app:
 
 1. install dependencies
+    ```
+    poetry install
+    ```
 
-    pip install -r requirements.txt
+2. Activate the poetry environment
+    ```
+    poetry env activate
+    ```
 
-2. Run server
+    paste what returns from this command
 
+3. Run server
+    ```
     python manage.py runserver
-
+    ```
 ---
 
 😁 **Thanks for your attention!**
