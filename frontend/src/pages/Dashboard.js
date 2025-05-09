@@ -10,7 +10,7 @@ export default function Dashboard() {
   const [boxer, setBoxer] = useState(null);
 
   useEffect(() => {
-    axios.get('/api/boxer-stats/1/')
+    axios.get('/api/boxer-stats/2/')
       .then(res => setBoxer(res.data))
       .catch(err => console.error(err));
   }, []);
