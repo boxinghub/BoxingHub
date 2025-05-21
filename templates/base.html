@@ -18,6 +18,7 @@
     <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet"> 
     <link href="{% static 'fonts/font-awesome/css/font-awesome.css' %}" rel="stylesheet"> 
     <link href="{% static 'css/style.css' %}" rel="stylesheet"> 
+    <link href="{% static 'css/pyramid.css' %}" rel="stylesheet">
 
     <!-- inheritance  -->
     <title>{% block title %}{% endblock %}</title>
@@ -90,7 +91,6 @@
                         <li class="dropdown {% if active == 'ai-boxing' %}active{% endif %}">
                             <a>AI & Boxing</a>
                             <div class="dropdown-content">
-                            <a href="{% url 'computer-vision' %}">AI Inference on Boxing</a>
                             <a href="{% url 'accessibility' %}">Accessibility Tools</a>
                             </div>
                         </li>

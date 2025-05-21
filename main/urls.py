@@ -1,6 +1,5 @@
 from django.urls import path
 from . import views
-from computer_vision.views import computer_vision
 
 
 urlpatterns = [
@@ -13,6 +12,5 @@ urlpatterns = [
     path('rules/', views.rules, name='rules'),
     path('update_like/', views.update_like, name='update_like'),
     path('update_love/', views.update_love, name='update_love'),
-    # path('computer-vision', computer_vision, name='computer-vision'),
-    path('accessibility/', views.accessibility, name='accessibility'),
+    path('accessibility', views.accessibility, name='accessibility'),
 ]   

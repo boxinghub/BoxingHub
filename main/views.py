@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from .models import BoxingHub
-from computer_vision.views import computer_vision
+# from computer_vision.views import computer_vision
+
 
 def get_likes_and_loves():
     boxinghub = BoxingHub.objects.all().first()

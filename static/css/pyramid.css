@@ -1,0 +1,66 @@
+/* pyramid.css */
+:root {
+    /* border inset (px) – you can tweak if you like thicker/thinner lines */
+    --pyr-border: 8px;
+  }
+  
+  /* root wrapper */
+  .boxing-pyramid {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  /* title */
+  .boxing-pyramid__title {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* responsive container: fills its column and keeps a golden ratio */
+  .boxing-pyramid__container {
+    position: relative;
+    width: 100%;
+    /* aspect-ratio: width/height = 1.618 */
+    aspect-ratio: 809 / 500;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* black fill triangle, inset by the border thickness */
+  .boxing-pyramid__shape {
+    position: absolute;
+    inset: var(--pyr-border);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: #000;
+    overflow: hidden;
+  }
+  
+  /* dividers at 20% intervals of the triangle height */
+  .boxing-pyramid__divider {
+    position: absolute;
+    left: 0; width: 100%; height: 4px;
+    background: #eee;
+  }
+  .boxing-pyramid__divider--1 { bottom: 20%; }
+  .boxing-pyramid__divider--2 { bottom: 40%; }
+  .boxing-pyramid__divider--3 { bottom: 60%; }
+  .boxing-pyramid__divider--4 { bottom: 80%; }
+  
+  /* labels centered on each slice */
+  .boxing-pyramid__label {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size:medium;
+    transform: translateY(50%);
+  }
+  .boxing-pyramid__label--1 { bottom: 10%; }
+  .boxing-pyramid__label--2 { bottom: 30%; }
+  .boxing-pyramid__label--3 { bottom: 50%; }
+  .boxing-pyramid__label--4 { bottom: 70%; }
+  .boxing-pyramid__label--5 { bottom: 90%; }
+  
