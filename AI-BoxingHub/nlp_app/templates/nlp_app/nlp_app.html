@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Speaker Diarisation and Speech-to-Text
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block body %}
+<section id="nlp-app" class="section clearfix no-view secPadding" data-animation-effect="fadeIn">
+
+    <div class="space"></div>
+	<div class="container">
+		<div class="col-md-12">
+            <div class="row">
+                <h1>An Accessibility Tool for Deaf Boxing Enthusiasts</h1>
+                <h1>Speaker Diarisation and Speech-to-Text</h1>
+
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Upload to diarise and transcribe</button>
+                </form>
+            </div>
+
+            <div class="row"></div>
+                <h2>Please wait for a few seconds for the diarisation and transcription to complete.</h2>
+
+                {% if transcript %}
+                    <h2>Diarised and Transcribed Text</h2>
+                    <table style="table-layout: auto; width: 100%; text-align: center; border: 1px solid black; border-collapse: collapse; border-radius: 10px;">
+                        <thead style="height: 50px;">
+                            <th style="text-align: center; border: 1px solid black; border-collapse: collapse; border-radius: 10px;">Speakers</th>
+                            <th style="text-align: center; border: 1px solid black; border-collapse: collapse; border-radius: 10px;">Date</th>
+                            <th style="text-align: center; border: 1px solid black; border-collapse: collapse; border-radius: 10px;">Start Time</th>
+                            <th style="text-align: center; border: 1px solid black; border-collapse: collapse; border-radius: 10px;">Stop Time</th>
+                            <th style="text-align: center; border: 1px solid black; border-collapse: collapse; border-radius: 10px;">Transcript</th>
+                        </thead>
+                        <tbody>
+                            {% for row in transcript %} 
+                                <tr style="height: 50px;">
+                                    <td style="text-align: center; border: 1px solid black; border-collapse: collapse; border-radius: 10px;">{{ row.speaker }}</td>
+                                    <td style="text-align: center; border: 1px solid black; border-collapse: collapse; border-radius: 10px;">{{ row.date }}</td>
+                                    <td style="text-align: center; border: 1px solid black; border-collapse: collapse; border-radius: 10px;">{{ row.start_timestamp }}</td>
+                                    <td style="text-align: center; border: 1px solid black; border-collapse: collapse; border-radius: 10px;">{{ row.end_timestamp }}</td>
+                                    <td style="text-align: center; border: 1px solid black; border-collapse: collapse; border-radius: 10px;">{{ row.transcript }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% endif %}
+            </div>
+		</div>
+	</div>
+    <div class="space"></div>
+
+</section>
+{% endblock %}

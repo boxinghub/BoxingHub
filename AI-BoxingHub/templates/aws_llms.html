@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+My Affirmations
+{% endblock %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'css/aws_llms_style.css' %}">
+{% endblock %}
+
+{% block body %}
+<section id="aws_llms" class="section clearfix no-view secPadding" data-animation-effect="fadeIn">
+	<div class="space"></div>
+	<div class="container">
+		<div class="col-md-12">
+				<h1><span>My Affirmations</span></h1>
+				<section class="text">
+					<h3 id="affirmation">Loading...</h3>
+				</section>
+				<button id="getNewAffirmation" disabled>Another Please</button>
+		</div>
+	</div>
+</section>
+
+{% block extra_scripts %}
+<script type="module" crossorigin src="{% static 'vite/assets/aws_llms_script.js' %}"></script>
+{% endblock %}
+
+{% endblock %}
