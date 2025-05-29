@@ -60,7 +60,7 @@
     poetry env activate
     ```
 
-    paste what returns from this command
+    **paste what returns from this command to activate virtual environment**
 
 3. Run server
     ```

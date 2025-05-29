@@ -1,3 +1,6 @@
 asgiref==3.8.1
-Django==5.0.6
-sqlparse==0.5.0
+-e git+https://github.com/hongbo-wei/boxinghub.git@5023a0886c051ef84eb0c12dd80cd4ca6da52ea1#egg=boxinghub
+Django==5.2
+django-cors-headers==4.7.0
+djangorestframework==3.16.0
+sqlparse==0.5.3
